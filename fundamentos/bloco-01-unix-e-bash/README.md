@@ -1,4 +1,4 @@
-##### Bloco 01 - Unix e Bash
+### Bloco 01 - Unix e Bash
 
 Aqui aprendemos como funciona o `Unix` e como interagir com ele através do terminal, utilizando o `Bash`.
 
@@ -9,4 +9,4 @@ Aqui aprendemos como funciona o `Unix` e como interagir com ele através do term
 - Arquivos e processos, o que são?
 - Qual sua estrutura de diretórios?
 - O que é o terminal?
-- Comandos executados no Shell.
+- Comandos executados no `Shell`.
