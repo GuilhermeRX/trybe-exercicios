@@ -1,4 +1,7 @@
 - Unix
 - Bash
 - Git
-Reactjs
+- Reactjs
+- HTML
+- CSS
+
