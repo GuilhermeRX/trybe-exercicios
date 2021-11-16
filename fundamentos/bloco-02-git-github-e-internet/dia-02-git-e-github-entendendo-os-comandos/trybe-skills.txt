@@ -1,7 +1,6 @@
 - Unix
 - Bash
 - Git
-- Reactjs
 - HTML
 - CSS
-
+- Vuejs
