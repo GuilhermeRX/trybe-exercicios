@@ -2,4 +2,5 @@
 - Bash
 - Git
 - HTML
-- Css
+- CSS
+- Vuejs
