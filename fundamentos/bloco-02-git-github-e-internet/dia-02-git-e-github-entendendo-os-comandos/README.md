@@ -1,4 +1,4 @@
-### DIA 3
+### DIA 2
 
 O objetivo dos exercícios desse dia foi colocar em prática o que havia aprendido sobre Git e GitHub.
 Neste exercicio precisamos utilizar conteudos do bloco passado (Unix e Bash) para criar arquivos, editar arquivos e também comandos de Git para criar novas branchs, mudar de uma branch para outra, fazer Pull Request e Merger, oque nos ajuda bastante a fixar todo conhecimento adquirido.
