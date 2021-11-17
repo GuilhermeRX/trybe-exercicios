@@ -1,3 +1,5 @@
+![capa2](https://user-images.githubusercontent.com/86189612/142197254-936d66b4-70e8-4b06-b31d-2b51c55f973b.png)
+
 # Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Luiz Guilherme Avelino](https://www.linkedin.com/in/luizguilhermeavelino/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
