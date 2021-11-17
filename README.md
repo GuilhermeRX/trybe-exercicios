@@ -1,6 +1,9 @@
+<h1 align="center">
+  <img alt="Trybe" src="logoreadme.png"/>
+  <br>
+  <br>
+</h1>
 
-
-# Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Luiz Guilherme Avelino](https://www.linkedin.com/in/luizguilhermeavelino/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
