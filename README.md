@@ -1,4 +1,4 @@
-![CAPA LINKEDIN_PERFIL PESSOAL03 (3)](https://user-images.githubusercontent.com/86189612/142197412-9fc562b6-d566-4599-a611-b9548f5cb788.png)
+
 
 # Trybe
 
