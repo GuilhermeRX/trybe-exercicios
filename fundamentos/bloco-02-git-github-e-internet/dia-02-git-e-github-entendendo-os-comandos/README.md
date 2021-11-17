@@ -8,21 +8,22 @@ Os requisitos do exercício foram:
 1. Navegue até a raiz do projeto com o arquivo .txt;
 
 2. Verifique se não existe nada sem "commitar" utilizando git status :
- - Caso exista algo, verifique se é necessário e faça o commit , ou remova-o.
+  - Caso exista algo, verifique se é necessário e faça o commit , ou remova-o.
 
 3. Crie uma nova branch com o nome trybe-skills-changes e faça checkout nela;
 
 4. No arquivo .txt , ao final da lista de habilidades , adicione mais duas habilidades que serão desenvolvidas na Trybe:
  
- - Exemplo:
+  - Exemplo:
 
 O que eu vou aprender na Trybe:
-
-- Unix
-- Bash
-- Git
-- HTML
-- CSS
+__________________________________________________________________________________________________________________________________________________________________
+- __Unix__
+- __Bash__
+- __Git__
+- __HTML__
+- __CSS__
+__________________________________________________________________________________________________________________________________________________________________
 
 - Faça um git add nome-do-arquivo.extensao ;
 - Você pode adicionar todos os arquivos que você modificou usando git add . , mas evite isso em commits com muitos arquivos para não adicionar nenhuma alteração por engano;
