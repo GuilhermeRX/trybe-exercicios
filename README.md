@@ -1,3 +1,5 @@
+
+
 # Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Luiz Guilherme Avelino](https://www.linkedin.com/in/luizguilhermeavelino/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
