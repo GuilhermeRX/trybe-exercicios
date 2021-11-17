@@ -1,7 +1,6 @@
 <h1 align="center">
   <img alt="Trybe" src="logoreadme.png"/>
   <br>
-  <br>
 </h1>
 
 
