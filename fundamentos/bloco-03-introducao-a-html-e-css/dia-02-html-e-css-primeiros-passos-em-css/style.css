@@ -1,0 +1,31 @@
+h1 {
+    width: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+
+
+.list-1 {
+    background-color: red;
+}
+p {
+    font-weight: 600;
+    font-size: 2em;
+    font-style: italic;
+    line-height:30px;
+    text-decoration: underline;
+
+}
+body {
+    font-size: 16px;
+    background-color: aqua;
+}
+#li1 {
+    background-color:yellow ;
+}
+#li2 {
+    background-color:red ;
+}
+#li3 {
+    background-color: brown;
+}
