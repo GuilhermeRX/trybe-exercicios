@@ -16,7 +16,7 @@ h1 {
 }
 
 .stomatopoda {
-    width: 600px;
+    width: 500px;
     border-radius: 0px 200px 0px 200px;
     opacity: 85%;
     margin-top: 10px;
@@ -32,10 +32,11 @@ header  nav ul li {
 
 header nav ul li a{
     text-decoration: none;
+    color: #403D58;
 }
 
 header nav {
-    background-color: crimson;
+    background-color: rgb(248, 241, 243);
     line-height: 30px;
     width: 350px;
     border-radius: 0px 20px 0px 20px;
