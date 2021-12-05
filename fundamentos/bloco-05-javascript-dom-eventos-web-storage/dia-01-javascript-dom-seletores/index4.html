@@ -42,11 +42,11 @@
       </section>
     </main>
     <script>
-        document.getElementById("text").style.fontSize = "30px"
-        document.getElementById("text").innerText = "Manipulando Dom Bloco 5.1"
-        document.getElementById("text").style.marginLeft = "80px"
-        document.getElementsByClassName("main-content")[0].style.background = "#CF4D6F"
-        document.getElementsByTagName("h1")[0].style.color = "#76818E"
+        //document.getElementById("text").style.fontSize = "30px"
+       // document.getElementById("text").innerText = "Manipulando Dom Bloco 5.1"
+        //document.getElementById("text").style.marginLeft = "80px"
+        //document.getElementsByClassName("main-content")[0].style.background = "#CF4D6F"
+       // document.getElementsByTagName("h1")[0].style.color = "#76818E"
 
         function mudatexto(texto) {
             let test = document.getElementsByTagName('p')
@@ -55,12 +55,45 @@
               
             }
         }
-        function cor(cor) {
+        mudatexto('Ola meus amigos')
+
+        function cor(input) {
             let test1 = document.getElementsByClassName("main-content")
             for (let i of test1) {
-                i.style.background = cor
+                i.style.background = input
+            
             }
+            
         }
+        cor('rgb(76,164,109)')
+        
+        function mudaquadrado(cor) {
+          let abrev = document.getElementsByClassName('center-content')[0]
+          abrev.style.background = cor
+        }
+        mudaquadrado('#fff')
+
+        function corrige(texto) {
+          let th1 = document.getElementsByTagName('h1')[0]
+          th1.innerText = texto
+        }
+        corrige('Corrigindo o texto')
+        
+        function modtexto(){
+        let upCase = document.querySelectorAll('p')[1]
+          upCase.innerHTML = upCase.innerHTML.toUpperCase();
+         
+        }
+        modtexto()
+
+        function printconsole(){
+          let tags = document.getElementsByTagName('p')
+          for (let index of tags) {
+            console.log(index.innerHTML)
+          }
+
+        }
+        printconsole()
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
