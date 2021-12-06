@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        // exercicio 1
+      let tag = document.createElement('h1')
+        tag.innerText = "Exercício 5.2 - JavaScript DOM"
+            document.body.appendChild(tag)
+        
+        //exercicio 2
+
+        let ex2 = document.createElement('main')
+            ex2.className = 'main-content'
+            document.body.appendChild(ex2)
+
+        // exercicio 3
+
+        let ex3 = document.createElement('section')
+            ex3.className = "center-content"
+            document.querySelector('main').appendChild(ex3)
+
+        //exercicio 4
+
+        let ex4 = document.createElement('p')
+            ex4.innerText = "A primeira de seu nome, mãe de dragões, a não queimada ! HELLOW GOT"
+            document.querySelector('.center-content').appendChild(ex4)
+
+        //exercicio 5
+
+        let ex5 = document.createElement('section')
+            ex5.className = "left-content"
+            document.querySelector('main').appendChild(ex5)
+
+        // exercicio 6
+
+        let ex6 = document.createElement('section')
+            ex6.className = "right-content"
+            document.querySelector('main').appendChild(ex6)
+
+        //exercicio 7
+
+        let ex7 = document.createElement('img')
+            ex7.src = 'https://picsum.photos/200'
+            ex7.className = "small-image"
+            document.querySelector('.left-content').appendChild(ex7)
+
+        // exercicio 8
+
+        let ex8 = document.createElement('ul')
+        document.querySelector('.right-content').appendChild(ex8)
+
+        let lista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+
+        for(let num of lista){
+            const listanum = document.createElement('li')
+            listanum.innerHTML = num
+            document.querySelector('ul').appendChild(listanum)
+
+        }
+
+        //exercicio 9
+
+        for (let index = 1; index <= 3; index += 1){
+            const elementh3 = document.createElement('h3') 
+            elementh3.innerHTML = "Show Show" + index;
+            document.querySelector('main').appendChild(elementh3)
+            
+        }
+
+        //exerciocio 1
+            document.querySelector('h1').className = "title"
+
+        //exercicio 2
+        let add = document.getElementsByTagName('h3')
+        for (let index = 0; index < 3; index += 1){
+            
+            add[index].className = 'description'
+        }
+
+        //exercicio 3
+
+        document.querySelector('main').removeChild(ex5)
+
+
+        ex6.style.marginRight = 'auto'
+
+        document.querySelector('main').style.background = "green"
+
+
+
+        
+       
+        ex8.lastChild.remove()
+        ex8.lastChild.remove()
+
+        
+
+
+        
+
+            
+            
+
+    
+       
+            
+
+
+
+    </script>
+  </body>
+</html>
