@@ -1,0 +1,44 @@
+h1 {
+    margin-left: 200px;
+
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin-left: 200px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
+
+  h3 {
+    margin-left: 250px;
+
+  }
+
+  li {
+    display: inline-block;
+    text-align: center;
+    
+  }
+  

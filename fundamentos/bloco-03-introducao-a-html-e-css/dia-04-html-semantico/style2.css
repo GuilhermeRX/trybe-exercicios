@@ -1,0 +1,44 @@
+body {
+    background-color: #56CBF9;
+    font-family: 'Gluten', cursive;
+    color: #403D58;
+}
+
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 100;
+    
+}
+
+.stomatopoda {
+    width: 500px;
+    border-radius: 0px 200px 0px 200px;
+    opacity: 85%;
+    margin-top: 10px;
+}
+
+
+header  nav ul li {
+    display: inline-block;
+    margin-right: 27px;
+    text-decoration: none;
+    
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #403D58;
+}
+
+header nav {
+    background-color: rgb(248, 241, 243);
+    line-height: 30px;
+    width: 350px;
+    border-radius: 0px 20px 0px 20px;
+    margin: 30px auto;
+}
