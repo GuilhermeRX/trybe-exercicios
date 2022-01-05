@@ -1,0 +1,17 @@
+{
+  "name": "dia-02-bibliotecas-javascript-framework-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.6.0.min.js",
+  "dependencies": {
+    "just-validate": "^3.2.2",
+    "popup-validation": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

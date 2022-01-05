@@ -16,6 +16,60 @@ let form = document.querySelector('#form')
 let gerateCv = document.querySelector('#gerateCv')
 let btnLimpar = document.querySelector('#btn-limpar')
 
+
+const validate = new window.JustValidate('#form');
+
+const validation = new JustValidate(
+  '#email',
+  {
+    errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+      border: '1px solid red',
+    },
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: 'red',
+      textDecoration: 'underlined',
+    },
+    focusInvalidField: true,
+    lockForm: true,
+    tooltip: {
+      position: 'top',
+    },
+  },
+  [
+    {
+      key: 'Name is too short',
+      dict: {
+        ru: 'Имя слишком короткое',
+        es: 'El nombre es muy corto',
+      },
+    },
+    {
+      key: 'Field is required',
+      dict: {
+        ru: 'Обязательное поле',
+        es: 'Se requiere campo',
+      },
+    },
+  ]
+);
+
+validation.addField('#email', [
+  {
+    rule: 'minLength',
+    value: 3,
+    errorMessage: 'Email is required' , 
+  },
+  {
+    rule: 'maxLength',
+    value: 30,
+    errorMessage: 'Email is required' , 
+  },
+]);
+
+
+
 document.getElementById('data').DatePickerX.init( {
   format: 'dd/mm/yyyy',
   singleMonthLabels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
@@ -49,54 +103,6 @@ function preventDefaultForm() {
 
 preventDefaultForm()
 
-
-function verifyDados() {
-
-  btnSubmit.addEventListener('click', function (event) {
-    let name = inputName.value
-    let email = inputEmail.value
-    let cpf = inputCpf.value
-    let endereco = inputEndereco.value
-    let cidade = inputCidade.value
-
-    if (viewCurriculo.firstChild) {
-      let child = viewCurriculo.firstChild
-      child.remove()
-    }
-
-    if (name.length == 0 || email.length == 0 || cpf.length == 0 || endereco.length == 0 || cidade.length == 0 || estado.value == '') {
-      let div = document.createElement('div')
-      let tagP = document.createElement('p')
-      tagP.id = 'msgError'
-      tagP.innerText = 'Error ! Preencha Corretamento o Formulário'
-      div.appendChild(tagP)
-
-      viewCurriculo.appendChild(div)
-    }
-
-    if (tipoCasa.checked == false && tipoApart.checked == false) {
-      let div = document.createElement('div')
-      let tagP = document.createElement('p')
-      tagP.id = 'msgError'
-      tagP.innerText = 'Error ! Preencha Corretamento o Formulário'
-      div.appendChild(tagP)
-
-      viewCurriculo.appendChild(div)
-    }
-
-    if (resumocv.value == '' || cargo.value == '' || descricaoCargo.value == '') {
-      let div = document.createElement('div')
-      let tagP = document.createElement('p')
-      tagP.id = 'msgError'
-      tagP.innerText = 'Error ! Preencha Corretamento o Formulário'
-      div.appendChild(tagP)
-
-      viewCurriculo.appendChild(div)
-    }
-  })
-}
-
-verifyDados()
 
 
 function createCv() {
@@ -177,7 +183,3 @@ function limparFormulario() {
 }
 
 limparFormulario()
-
-
-
-
