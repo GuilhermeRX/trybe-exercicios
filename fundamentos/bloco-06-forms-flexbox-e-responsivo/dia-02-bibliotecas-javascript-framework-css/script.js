@@ -16,11 +16,8 @@ let form = document.querySelector('#form')
 let gerateCv = document.querySelector('#gerateCv')
 let btnLimpar = document.querySelector('#btn-limpar')
 
-
-const validate = new window.JustValidate('#form');
-
 const validation = new JustValidate(
-  '#email',
+  '#form',
   {
     errorFieldCssClass: 'is-invalid',
     errorFieldStyle: {
@@ -55,29 +52,26 @@ const validation = new JustValidate(
   ]
 );
 
-validation.addField('#email', [
-  {
-    rule: 'minLength',
-    value: 3,
-    errorMessage: 'Email is required' , 
-  },
-  {
-    rule: 'maxLength',
-    value: 30,
-    errorMessage: 'Email is required' , 
-  },
-]);
+  validation
+  .addField('#name', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+  ])
 
-
-
-document.getElementById('data').DatePickerX.init( {
+document.getElementById('data').DatePickerX.init({
   format: 'dd/mm/yyyy',
   singleMonthLabels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
   weekDayLabels: ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
   mondayFirst: false,
   todayButtonLabel: 'Hoje',
   clearButtonLabel: 'Limpar'
-} ) ;
+});
 
 
 let arrayDeEstados = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantis"]
@@ -183,3 +177,5 @@ function limparFormulario() {
 }
 
 limparFormulario()
+
+
