@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <form action="" method="get" id="form">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="name">Nome:</label>
+        <input type="text" required maxlength="40" id="name" name="name">
+
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" required maxlength="50" id="email" name="email">
+
+        <br>
+        <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" required maxlength="11" id="cpf" name="cpf">
+
+        <br>
+        <br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" required maxlength="200" id="endereco" name="endereco">
+
+        <br>
+        <br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" required maxlength="28" id="cidade" name="cidade">
+
+        <br>
+        <br>
+
+        <label for="estado">Estado:</label>
+        <select name="Estado" id="estado" required>
+          <option value="" disabled selected>Selecione</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="casa">Tipo:<input type="radio" required value="casa" id="casa" name="Tipo">Casa</label>
+        <label for="apartamento"> <input type="radio" required value="apartamento" id="apartamento"
+            name="Tipo">Apartamento</label>
+      </fieldset>
+
+      <fieldset>
+
+        <legend>Dados do Ultimo Emprego</legend>
+
+        <label for="resumocv">Resumo do Currículo:</label>
+        <br>
+        <textarea name="resumocv" id="resumocv" cols="50" rows="15" maxlength="1000"></textarea>
+        <br>
+        <br>
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" maxlength="40" name="cargo" required>
+        <br>
+        <br>
+        <label for="descricaoCargo">Descrição do Cargo:</label>
+        <input type="text" id="descricaoCargo" name='descricaoCargo' maxlength="500">
+        <br>
+        <br>
+        <label for="data">Data de Início:</label>
+        <input type="text" id="data" name="dataInicio" placeholder="dd/mm/aaaa" maxlength="10" required>
+
+      </fieldset>
+      <br>
+
+      <button id="submit" type="submit">Enviar</button>
+      <button id="btn-limpar" type="reset">Limpar Form</button>
+      
+
+    </form>
+    <div id="curriculo"></div>
+
+    <div id="gerateCv">
+
+    </div>
+
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
