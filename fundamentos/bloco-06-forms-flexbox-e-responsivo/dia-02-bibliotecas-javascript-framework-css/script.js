@@ -54,8 +54,16 @@ function preventDefaultForm() {
 
 
 const validation = new JustValidate('form', {
-  errorFielClass: 'is-invalid',
+  errorFieldCssClass: 'is-invalid',
+  errorLabelStyle: {
+    fontSize: '14px',
+    color: '#dc3545',
+  },
+  focusInvalidField: true,
+  lockForm: true,
 });
+
+
 
 
 validation
@@ -63,7 +71,7 @@ validation
     {
       rule: 'required',
       errorMessage: 'Campo obrigatório',
-    },    
+    },
     {
       rule: 'minLength',
       value: 3,
@@ -144,7 +152,7 @@ validation
     '#radio-group',
     'Uma opção precisa ser selecionada'
   )
-  
+
   .addField('#resumocv', [
     {
       rule: 'required',
