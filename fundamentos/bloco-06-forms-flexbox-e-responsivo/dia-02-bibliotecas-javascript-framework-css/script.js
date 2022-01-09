@@ -1,3 +1,5 @@
+import JustValidate from './node_modules/just-validate/dist/just-validate.es.js'
+
 let estado = document.querySelector("#estado")
 let data = document.querySelector('#data')
 let btnSubmit = document.querySelector('#submit')
@@ -16,53 +18,8 @@ let form = document.querySelector('#form')
 let gerateCv = document.querySelector('#gerateCv')
 let btnLimpar = document.querySelector('#btn-limpar')
 
-const validation = new JustValidate(
-  '#form',
-  {
-    errorFieldCssClass: 'is-invalid',
-    errorFieldStyle: {
-      border: '1px solid red',
-    },
-    errorLabelCssClass: 'is-label-invalid',
-    errorLabelStyle: {
-      color: 'red',
-      textDecoration: 'underlined',
-    },
-    focusInvalidField: true,
-    lockForm: true,
-    tooltip: {
-      position: 'top',
-    },
-  },
-  [
-    {
-      key: 'Name is too short',
-      dict: {
-        ru: 'Имя слишком короткое',
-        es: 'El nombre es muy corto',
-      },
-    },
-    {
-      key: 'Field is required',
-      dict: {
-        ru: 'Обязательное поле',
-        es: 'Se requiere campo',
-      },
-    },
-  ]
-);
 
-  validation
-  .addField('#name', [
-    {
-      rule: 'minLength',
-      value: 3,
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-  ])
+
 
 document.getElementById('data').DatePickerX.init({
   format: 'dd/mm/yyyy',
@@ -95,8 +52,145 @@ function preventDefaultForm() {
   })
 }
 
-preventDefaultForm()
 
+const validation = new JustValidate('form', {
+  errorFielClass: 'is-invalid',
+});
+
+
+validation
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },    
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Nome precisa ter no mínimo 3 caracteres.',
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+      errorMessage: 'O limite é de 40 caracteres.'
+    },
+  ])
+
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório.',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email inválido'
+    },
+    {
+      rule: 'maxLength',
+      value: 50,
+      errorMessage: 'O limite é de 50 caracteres.'
+    },
+  ])
+
+  .addField('#cpf', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'minLength',
+      value: 11,
+      errorMessage: 'CPF inválido',
+    },
+    {
+      rule: 'maxLength',
+      value: 11,
+      errorMessage: 'CPF inválido',
+    },
+  ])
+
+  .addField('#endereco', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'maxLength',
+      value: 200,
+      errorMessage: 'O limite é de 200 caracteres.'
+    },
+  ])
+
+  .addField('#cidade', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'maxLength',
+      value: 28,
+      errorMessage: 'O limite é de 28 caracteres.'
+    },
+  ])
+
+  .addField('#estado', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+  ])
+
+  .addRequiredGroup(
+    '#radio-group',
+    'Uma opção precisa ser selecionada'
+  )
+  
+  .addField('#resumocv', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'maxLength',
+      value: 1000,
+      errorMessage: 'O limite é de 1000 caracteres.'
+    },
+  ])
+
+  .addField('#cargo', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+      errorMessage: 'O limite é de 40 caracteres.'
+    },
+  ])
+
+  .addField('#descricaoCargo', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    },
+    {
+      rule: 'maxLength',
+      value: 500,
+      errorMessage: 'O limite é de 500 caracteres.',
+    }
+  ])
+
+  .addField('#data', [
+    {
+      rule: 'required',
+      errorMessage: 'Campo obrigatório',
+    }
+  ])
+
+  .onSuccess((event) => {
+    createCv()
+  })
 
 
 function createCv() {
@@ -167,7 +261,7 @@ function createCv() {
   })
 }
 
-createCv()
+
 
 
 function limparFormulario() {
