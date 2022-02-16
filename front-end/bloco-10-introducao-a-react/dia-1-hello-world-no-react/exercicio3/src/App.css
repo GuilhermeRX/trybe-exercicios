@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border box;
+}
+
+.header {
+  text-align: center;
+  background-color: brown;
+  margin: 0;
+}
+
+.content {
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  line-height: 20px;
+  width: 350px;
+  height: 100px;
+  background-color: cadetblue;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  margin-top: 100px;
+  background-color: cornflowerblue;
+  height: 60px;
+  justify-content: center;
+}
+
+.footer h1 {
+  align-self: center;
+}
