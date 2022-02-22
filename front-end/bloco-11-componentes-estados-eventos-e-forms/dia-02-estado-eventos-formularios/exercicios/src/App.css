@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  margin: 10px;
+}
