@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+fieldset input {
+  margin: 8px;
+}
+
+fieldset label {
+  display: flex;
+  margin: 8px;
+  align-items: center;
+}
+
+fieldset textarea {
+  margin: 8px;
+}
+
+button {
+  margin-top: 8px;
+}
