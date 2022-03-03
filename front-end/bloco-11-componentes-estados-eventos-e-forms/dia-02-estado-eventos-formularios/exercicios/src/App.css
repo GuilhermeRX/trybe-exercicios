@@ -17,3 +17,12 @@ form {
 form input {
   margin: 10px;
 }
+
+form select {
+  margin: 10px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
